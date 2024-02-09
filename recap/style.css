@@ -1,0 +1,14 @@
+body{
+    display: flex;
+}
+
+div{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    border: 1px solid black;
+
+}
