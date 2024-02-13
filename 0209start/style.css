@@ -70,25 +70,33 @@
     justify-content: space-evenly;
     height: 100vh;
 }
+.title__box{
+    position: relative;
+    text-align: center;
+    
+    height: 1000px;
+}
 .main__screen .blue__title{
+    margin-bottom: 22px;
     color: #1C54E4;
     font-weight: 600;
     font-size: 40px;
 }
 .main__screen .main__title{
-    display: flex;
-    align-items: center;
     font-weight: 700;
     font-size: 100px;
     font-weight: 700;
 }
 .main__screen .sub__title{
+    margin-top: 25px;
+    margin-bottom: 55px;
     font-size: 40px;
 }
 .main__screen .blue__button{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-inline: auto;
     font-size: 35px;
     color: white;
     height: 120px;
