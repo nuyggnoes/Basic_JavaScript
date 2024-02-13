@@ -1,8 +1,98 @@
-@media screen and (min-width: 80rem) {
-    .container {
-      margin: 1em 2em;
-      background-color: beige;
-      width: 500;
-      height: 500;
-    }
-  }
+.header .header__category .category__button,
+.header .header__category #white_box,
+.header .header__user__category .user__service,
+.header__toggle {
+    white-space: nowrap;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    position: fixed;
+}
+.header #main__logo{
+    display: flex;
+    padding: 30px;
+    color: #1C54E4;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.header .header__category{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .header__category .category__button{
+    font-size: 35px;
+    margin: 30px;
+}
+
+.header .header__category #white_box{
+    padding: 15px;
+    height: 80px;
+    border: 1px solid #1C54E4;
+    border-radius: 12px;
+    color: #1C54E4;
+    font-size: 35px;
+    font-weight: 500;
+}
+.header .header__user__category{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header .header__user__category .user__service{
+    display: flex;
+    margin: 10px;
+    color: grey;
+    font-size: 23px;
+}
+
+.header__toggle{
+    display: flex;
+    padding-inline: 15px;
+    padding-block: 5px;
+    font-size: 23px;
+    border: 1px solid lightgrey;
+}
+
+
+.main__screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+.main__screen .blue__title{
+    color: #1C54E4;
+    font-weight: 600;
+    font-size: 40px;
+}
+.main__screen .main__title{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 100px;
+    font-weight: 700;
+}
+.main__screen .sub__title{
+    font-size: 40px;
+}
+.main__screen .blue__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+    height: 120px;
+    width: 400px;
+    background-color: #1C54E4;
+    border-radius: 8px;
+}
