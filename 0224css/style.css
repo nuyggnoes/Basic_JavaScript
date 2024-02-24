@@ -30,3 +30,29 @@
     justify-content: end;
     margin-left: auto;
 }
+.nav .nav-container .nav-list .nav-item{
+    margin: 0px 12px;
+}
+.nav .nav-container .nav-list .nav-item .nav-text{
+    color: grey;
+    font-size: 15px;
+    font-weight: 500;
+}
+.nav .nav-container .nav-list .nav-item .nav-text:hover{
+    color: black;
+}
+.nav .nav-container .nav-list .nav-item-downloadBtn{
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 40px;
+    background: black;
+    border-radius: 8px;
+    padding: 0px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 12px;
+}
+.nav .nav-container .nav-list .nav-item-downloadBtn:hover{
+    opacity: 0.8;
+}
