@@ -17,10 +17,10 @@
         </div>
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-text">Github</a>
+            <a href="https://github.com/nuyggnoes" target="_blank" class="nav-text">Github</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-text">Usage</a>
+            <a href="https://www.youtube.com" target="_blank" class="nav-text">Usage</a>
           </li>
           <li>
             <div class="nav-item-downloadBtn">
@@ -32,13 +32,13 @@
     </header>
     <main class="main-screen">
       <div class="title-container">
-        <div>
+        <div class="title-box">
           <h1>High Quality Web Icons</h1>
           <h3>Simple Open Source icons carefully crafted for designers & developers</h3>
         </div>
       </div>
       <div class="option-container">
-        <div>
+        <div class="ad">
           <div class="ad-section">
             <div class="ad-card">
               <a href="#">
@@ -63,7 +63,26 @@
             <input id="search" type="text" placeholder="Search icons..." />
           </div>
         </div>
-        <div class="search-filter"></div>
+        <div class="search-filter">
+          <select name="filter" id="filter">
+            <option>All Categories</option>
+            <option>Accessibility</option>
+            <option>Alert</option>
+            <option>Animals</option>
+            <option>Arrows</option>
+            <option>Brands</option>
+            <option>Building</option>
+          </select>
+          <div class="icon-count">1634 of 1634 icons</div>
+          <div class="filter-btn">
+            <ul>
+              <li class="filter-btn-item filter-btn-selected">All</li>
+              <li class="filter-btn-item">Regular</li>
+              <li class="filter-btn-item">Solid</li>
+              <li class="filter-btn-item">Logos</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div>
         <ul>
@@ -80,5 +99,19 @@
         </ul>
       </div>
     </main>
+    <script>
+      let filterBtnList = document.querySelectorAll(".filter-btn-item");
+      for (let i = 0; i < filterBtnList.length; i++) {
+        filterBtnList[i].addEventListener("click", function () {
+          for (let j = 0; j < filterBtnList.length; j++) {
+            if (filterBtnList[j] === this) {
+              filterBtnList[j].classList.add("filter-btn-selected");
+            } else {
+              filterBtnList[j].classList.remove("filter-btn-selected");
+            }
+          }
+        });
+      }
+    </script>
   </body>
 </html>
