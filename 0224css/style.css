@@ -246,9 +246,61 @@
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 40px;
 }
+.footer{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    border-top: 1px solid #f2f2f2;
+}
+.footer .footer-container{
+    display: flex;
+}
+.footer .footer-container .footer-list{
+    display: flex;
+    height: 100%;
+}
+.footer .footer-container .footer-list .footer-list-item{
+    padding: 10px;
+    margin: 10px;
+    color: grey;
+    opacity: 0.5;
+    font-weight: 600;
+    font-size: 13px;
+}
+.footer .footer-container .footer-list .footer-list-item:hover{
+    opacity: 1;
+}
+.footer .footer-logo{
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.footer .footer-logo .footer-logo-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer-logo .footer-logo-icon i{
+    color:#aeaeae;
+    font-size: 35px;
+    padding-right: 10px;
+}
+.footer .footer-logo .footer-logo-text{
+    display: flex;
+    color: #aeaeae;
+    font-weight: 600;
+    margin-right: 25px;
+}
+.footer .footer-logo .footer-logo-text > div{
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width: 770px) {
-    .nav .nav-container .nav-list .nav-item{
+    .nav .nav-container .nav-list .nav-item,
+    .main-screen .option-container .search-filter .icon-count
+    {
         display: none;
     }
     .main-screen .title-container h1{
@@ -258,5 +310,33 @@
     .main-screen .title-container h3{
         font-size: 18px;
     }
+
+}
+@media screen and (max-width: 550px) {
+
+    .main-screen .title-container h1{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .main-screen .title-container h3{
+        font-size: 13px;
+    }
+    .main-screen .option-container .search-filter #filter,
+    .footer .footer-container{
+        display: none;
+    }
+    .main-screen .option-container .search-filter .filter-btn{
+        margin: 0;
+    }
+    .main-screen .option-container .search-filter .filter-btn .filter-btn-item{
+        font-size: 12px;
+    }
+    .main-screen .option-container .search-filter .filter-btn .filter-btn-item.filter-btn-selected{
+        height: 30px;
+    }
+    .footer .footer-logo{
+        margin-left:40%;
+    }
+    
 
 }
