@@ -56,3 +56,9 @@
 .nav .nav-container .nav-list .nav-item-downloadBtn:hover{
     opacity: 0.8;
 }
+
+@media screen and (max-width: 770px) {
+    .nav .nav-container .nav-list .nav-item{
+        display: none;
+    }
+}
