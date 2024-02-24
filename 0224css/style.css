@@ -1,4 +1,7 @@
 .nav { 
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: block;
     box-shadow: inset 0 -1px 0 #f6f6f6;
 }
@@ -57,8 +60,90 @@
     opacity: 0.8;
 }
 
+
+.main-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 70px;
+}
+.main-screen .title-container{
+    text-align: center;
+    max-width: 1200px;
+}
+.main-screen .title-container > div{
+    padding: 0 80px 14px;
+}
+.main-screen .title-container h1{
+    font-size: 90px;
+    font-weight: 600;
+}
+.main-screen .title-container h3{
+    font-size: 25px;
+    font-weight: 300;
+}
+.main-screen .option-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.main-screen .option-container > div{
+    display: flex;
+    width: 100%;
+    margin: 15px;
+    justify-content: center;
+}
+.main-screen .option-container .ad-section{
+    display: flex;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+.main-screen .option-container .ad-section .ad-card{
+    display: flex;
+}
+
+.main-screen .option-container .ad-section .ad-card img{
+    height: 100px;
+    width: 130px;
+    object-fit: cover;
+}
+.main-screen .option-container .ad-section .ad-card .ad-card-right{
+    display:flex;
+    flex-direction: column;
+}
+.main-screen .option-container .ad-section .ad-card .ad-card-right .ad-text{
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 10px;
+    line-height: 20px;
+}
+.main-screen .option-container .ad-section .ad-card .ad-card-right .ad-btn{
+    font-size: 11px;
+    font-weight: 500;
+    background-color: #e5e5e5;
+    width: fit-content;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-left: auto;
+}
+
 @media screen and (max-width: 770px) {
     .nav .nav-container .nav-list .nav-item{
         display: none;
     }
+    .main-screen .title-container h1{
+        font-size: 45px;
+        font-weight: 500;
+    }
+    .main-screen .title-container h3{
+        font-size: 18px;
+    }
+
 }
