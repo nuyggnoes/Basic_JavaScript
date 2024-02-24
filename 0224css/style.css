@@ -3,6 +3,7 @@
     top: 0;
     width: 100%;
     display: block;
+    background-color: #fff;
     box-shadow: inset 0 -1px 0 #f6f6f6;
 }
 .nav .nav-container{
@@ -66,11 +67,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:auto;
     margin-top: 70px;
     padding: 0px 20px;
 }
+
 .main-screen .title-container{
+    padding-top: 100px;
     text-align: center;
     max-width: 1200px;
 }
@@ -139,6 +142,7 @@
 }
 .main-screen .option-container .search-container{
     display: flex;
+    max-width: 1160px;
     border: 1px solid #f2f2f2;
     width: 100%;
     height: 60px;
@@ -182,11 +186,13 @@
 
 .main-screen .option-container .search-filter{
     display: flex;
+    max-width: 1160px;
     width: 100%;
     padding: 14px 0;
     box-shadow: inset 0 -1px 0 #f6f6f6;
 }
 .main-screen .option-container .search-filter #filter{
+    cursor: pointer;
     font-size: 15px;
     font-weight: 600;
     padding: 7px 15px;
@@ -220,6 +226,25 @@
     height: 40px;
     background-color: #f2f2f2;
     border-radius: 8px;
+}
+.main-screen .search-result-container{
+    display: flex;
+    overflow: auto;
+    max-height: 900px;
+    max-width: 1160px;
+    padding: 50px 30px;
+    width: 100%;
+    scroll-behavior: auto;
+}
+.main-screen .search-result-container::-webkit-scrollbar{
+    display: none;
+}
+
+.main-screen .search-result-container .grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 40px;
 }
 
 @media screen and (max-width: 770px) {

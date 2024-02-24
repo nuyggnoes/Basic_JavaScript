@@ -84,23 +84,14 @@
           </div>
         </div>
       </div>
-      <div>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-        </ul>
+      <div class="search-result-container">
+        <div class="grid-container"></div>
       </div>
     </main>
     <script>
+      let gridContainer = document.querySelector(".grid-container");
       let filterBtnList = document.querySelectorAll(".filter-btn-item");
+
       for (let i = 0; i < filterBtnList.length; i++) {
         filterBtnList[i].addEventListener("click", function () {
           for (let j = 0; j < filterBtnList.length; j++) {
@@ -110,6 +101,49 @@
               filterBtnList[j].classList.remove("filter-btn-selected");
             }
           }
+        });
+      }
+      function generateRandomColor() {
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+
+        return "rgb(" + red + ", " + green + ", " + blue + ")";
+      }
+
+      for (let i = 1; i <= 120; i++) {
+        let gridItem = document.createElement("div");
+        let gridText = document.createElement("div");
+        let tmpDiv = document.createElement("div");
+        let gridColorBox = document.createElement("div");
+        gridItem.style.display = "flex";
+        gridItem.style.flexDirection = "column";
+        gridItem.style.padding = "15px 0";
+        gridItem.style.border = "1px solid white";
+        gridItem.style.maxWidth = "109px";
+        gridItem.style.maxHeight = "109px";
+        tmpDiv.style.display = "flex";
+        tmpDiv.style.alignItems = "center";
+        tmpDiv.style.justifyContent = "center";
+        gridColorBox.style.borderRadius = "10px";
+        gridColorBox.style.height = "35px";
+        gridColorBox.style.width = "35px";
+        gridColorBox.style.backgroundColor = generateRandomColor();
+        gridColorBox.style.marginBottom = "18px";
+        gridText.textContent = i;
+        gridText.style.textAlign = "center";
+        gridItem.classList.add("grid-item");
+        tmpDiv.appendChild(gridColorBox);
+        gridItem.appendChild(tmpDiv);
+        gridItem.appendChild(gridText);
+        gridContainer.appendChild(gridItem);
+
+        gridItem.addEventListener("mouseenter", function () {
+          gridItem.style.border = "1px solid #f2f2f2";
+          gridItem.style.borderRadius = "8px";
+        });
+        gridItem.addEventListener("mouseleave", function () {
+          gridItem.style.border = "1px solid white";
         });
       }
     </script>
