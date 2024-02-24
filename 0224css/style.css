@@ -313,7 +313,17 @@
 
 }
 @media screen and (max-width: 550px) {
-
+    .nav .nav-container .nav-logo i{
+        font-size: 35px;
+    }
+    .nav .nav-container .nav-logo .nav-logo-text{
+        font-size: 24px;
+    }
+    .nav .nav-container .nav-list .nav-item-downloadBtn{
+        height: 35px;
+        font-size: 12px;
+        font-weight: 500;
+    }
     .main-screen .title-container h1{
         font-size: 30px;
         font-weight: 500;
