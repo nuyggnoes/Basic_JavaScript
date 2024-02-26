@@ -1,6 +1,7 @@
 const loginForm = document.querySelector(".login-form");
 const loginDiv = document.querySelector(".login");
 const loginInput = loginForm.querySelector(".login-input");
+const userBtn = document.querySelector(".nav-item-downloadBtn a");
 const greeting = document.querySelector(".greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -13,7 +14,8 @@ function onLoginSubmit(event) {
   event.preventDefault();
   const username = loginInput.value;
   //   localStorage.setItem(USERNAME_KEY, username);
-  loginDiv.classList.add(HIDDEN_CLASSNAME);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  userBtn.innerText = `Hello! ${username}`;
   paintGreeting(username);
 }
 
