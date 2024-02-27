@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>MyPage</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
         </ul>
       </div>
     </header>
-    <main class="main-screen">
+    <div class="main-screen">
       <div class="title-container">
         <div class="login">
           <form class="login-form">
@@ -38,10 +38,20 @@
             <button type="submit">Login</button>
           </form>
         </div>
-        <h1 class="greeting" class="hidden"></h1>
       </div>
-    </main>
+      <div class="todo-container hidden">
+        <h1 class="greeting"></h1>
+        <div class="todo-form">
+          <input type="text" placeholder="Write To Do" />
+          <button>ADD</button>
+        </div>
+        <div class="todo-list-paint">
+          <ul class="todo-list"></ul>
+        </div>
+      </div>
+    </div>
     <footer></footer>
     <script src="login.js"></script>
+    <script src="todo.js"></script>
   </body>
 </html>

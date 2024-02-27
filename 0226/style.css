@@ -73,11 +73,13 @@ input:focus{
 .main-screen{
     background-color: #e4e9f7;
     height: 100vh;
+    margin-top: 70px;
 }
 .main-screen .title-container{
     display: flex;
     flex-direction: column;
-    height: 400px;
+    margin-top: 70px;
+    height: 200px;
     justify-content: center;
     align-items: center;
 }
@@ -114,5 +116,5 @@ input:focus{
 }
 
 .main-screen .title-container .greeting{
-    font-size: 90px;
+    font-size: 40px;
 }
